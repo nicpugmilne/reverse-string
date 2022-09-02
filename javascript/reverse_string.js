@@ -1,5 +1,11 @@
 function reverseString(str) {
-  // type your code here
+  let arrOfCharacters = str.split("");
+  const reversedArr = [];
+  arrOfCharacters.forEach((char) => {
+    reversedArr.unshift(char);
+  });
+  let reversedString = reversedArr.join("");
+  return reversedString;
 }
 
 if (require.main === module) {
@@ -15,5 +21,12 @@ if (require.main === module) {
 
 module.exports = reverseString;
 
-// Please add your pseudocode to this file
+// Please add your pseudocode to this file\
+
+//1. Split argument (string type) into characters and assign to new array variable
+// 2. Iterate through the (string type) and push each character to new array
+// 3. Concatenate array into a String
+// 4. Return string
+
 // And a written explanation of your solution
+// As the argument passed into the reverseString function is a string, we first need to split each character off into an array. That way we can iterate through each character in order to reverse the string. We proceed in order, inserting each character as the first element of the new array. Finally we take that array of strings and join them back into a single string, so that we can return the new reversed word.
